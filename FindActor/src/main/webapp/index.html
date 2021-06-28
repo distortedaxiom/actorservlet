@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Actor Request</title>
+<!-- bootstrap style sheet link -->
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <!-- this jumbotron is copied from the bootstrap website -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Actor Request</h1>
+                <p class="lead">Please enter the ID number for an actor below.</p>
+            </div>
+        </div>
+        <!-- action should be the name of our servlet class -->
+        <form action="actorservlet" method="post">
+                <label for="actor-id">Actor ID</label>
+                <input type="number" id="actor-id" name="actor-id" min="1" max="200"><br><br>
+                <!-- there are 200 actors in sakila database -->
+            <input type="submit" value="Find" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>
